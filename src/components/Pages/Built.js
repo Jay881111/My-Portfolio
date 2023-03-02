@@ -6,6 +6,7 @@ import "../Navbar.css";
 import SignUp from "../SignUp/SignUp";
 import SignIn from "../SignIn/SignIn";
 import PortFolioDetail from "./PortFolioDetail";
+import { Link } from "react-router-dom";
 
 function Built() {
   const [myWindow, setMyWindow] = useState();
@@ -27,12 +28,13 @@ function Built() {
           <div className="border-2 p-4">
             <Board />
             <div className="ml-[300px] "></div>
-            <button
-              className="w-[100px] border-t-[1px] border-white ml-[200px]"
-              onClick={() => window.open("/features/boardmain", "_blank")}
+            <Link
+              className="w-[100px] p-[2px] border-[2px] no-underline text-white border-white ml-[150px]"
+              // onClick={() => window.open("/SignUp", "_blank")}
+              to="/features/boardmain"
             >
               새창에서 보기
-            </button>
+            </Link>
           </div>
         );
         break;
@@ -41,12 +43,13 @@ function Built() {
           <div className="border-2 h-full">
             <div className="-mt-[10vh]" />
             <SignUp />
-            <button
-              className="w-[100px] border-t-[1px] border-white ml-[150px]"
-              onClick={() => window.open("/signup", "_blank")}
+            <Link
+              className="w-[100px] p-[2px] border-[2px] no-underline text-white border-white ml-[150px]"
+              // onClick={() => window.open("/SignUp", "_blank")}
+              to="/SignUp"
             >
               새창에서 보기
-            </button>
+            </Link>
           </div>
         );
         break;
@@ -55,12 +58,13 @@ function Built() {
           <div className="border-2">
             <div className="-mt-[10vh]" />
             <SignIn />
-            <button
-              className="w-[100px] border-t-[1px] border-white ml-[150px]"
-              onClick={() => window.open("/login", "_blank")}
+            <Link
+              className="w-[100px] p-[2px] border-[2px] no-underline text-white border-white ml-[150px]"
+              // onClick={() => window.open("/SignUp", "_blank")}
+              to="/Login"
             >
               새창에서 보기
-            </button>
+            </Link>
           </div>
         );
         break;
