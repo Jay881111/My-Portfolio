@@ -1,0 +1,47 @@
+.header_top {
+  color: #ffffac;
+  font-family: "Poppins", cursive;
+}
+.header_name {
+  font-family: "Anton", sans-serif;
+  color: rgb(220, 216, 216);
+}
+
+.tag_number {
+  font-family: "Rowdies", cursive;
+  color: #ffffac;
+  font-size: 15px;
+}
+
+.mail_container {
+  /* display: block; */
+  /* ml-5 bottom-[15%] w-[4%] h-[40%] border-[1px] text-[10px] text-white fixed */
+  margin-left: 5px;
+  bottom: 12%;
+  /* width: 4%; */
+  /* height: 35%; */
+  font-weight: 200;
+  right: 0;
+  letter-spacing: 0.35em;
+  color: rgb(169, 169, 169);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.list_languages {
+  /* justify-content: space-evenly; */
+  font-size: 14px;
+  font-weight: 300;
+  color: rgb(207, 205, 205);
+  margin-top: 3px;
+  height: full;
+}
+
+input#go:hover {
+  background-color: yellow;
+  width: 80%;
+  color: black;
+}

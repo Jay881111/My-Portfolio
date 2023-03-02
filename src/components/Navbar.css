@@ -1,0 +1,12 @@
+#nav_tag {
+  color: #ffffac;
+}
+
+.font-link {
+  font-family: "Rowdies", cursive;
+  color: #ffffac;
+}
+
+html {
+  scroll-behavior: smooth;
+}

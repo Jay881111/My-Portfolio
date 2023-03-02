@@ -1,0 +1,16 @@
+{
+  "todos": [
+    {
+      "title": "todolist는 json-server를 이용했습니다",
+      "id": 1,
+      "status": "todo"
+    },
+    {
+      "title": "내용을 클릭하면 italic + line-through되어 표기됩니다",
+      "id": 2,
+      "status": "todo"
+    },
+    { "title": "리액트 공부하기", "id": 3, "status": "done" },
+    { "title": "카페가기", "id": 4, "status": "todo" }
+  ]
+}
