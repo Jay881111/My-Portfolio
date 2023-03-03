@@ -68,6 +68,9 @@ function Studied() {
               <li className="text-gray-400 md:text-[16px] text-[13px]">
                 Storage
               </li>
+              <li className="text-gray-400 md:text-[16px] text-[13px]">
+                Hosting
+              </li>
             </div>
           </div>
         </div>

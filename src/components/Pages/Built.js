@@ -20,9 +20,6 @@ function Built() {
     console.log(props);
 
     switch (props) {
-      case "todolist":
-        setMyWindow(<TodoMain />);
-        break;
       case "board":
         setMyWindow(
           <div className="border-2 p-4">
@@ -106,29 +103,24 @@ function Built() {
               <div> Used Skill: React, Firebase</div>
             </div>
           </div>
-          <div>
-            <input
-              key="2"
-              type="button"
-              id="go"
-              value="2. Todo List(click)"
-              className="mt-1 border-0 w-[180px] text-left text-yellow-400 font-semibold"
-              onClick={
-                // (() => window.open("/features/todolist", "_blank"),
-                () => handleWindow("todolist")
-              }
-            />
-            <div className="ml-[8px]">
-              <div> Used Skill: React</div>
-            </div>
+          <input
+            key="2"
+            type="button"
+            id="go"
+            value="2. 회원가입(click)"
+            className="mt-1 border-0 w-[140px] text-left text-yellow-400 font-semibold"
+            onClick={() => handleWindow("signup")}
+          />
+          <div className="ml-[8px]">
+            <div> Used Skill: React(Formik, Yup), Firebase</div>
           </div>
           <input
             key="3"
             type="button"
             id="go"
-            value="3. 회원가입(click)"
+            value="3. 로그인(click)"
             className="mt-1 border-0 w-[140px] text-left text-yellow-400 font-semibold"
-            onClick={() => handleWindow("signup")}
+            onClick={() => handleWindow("login")}
           />
           <div className="ml-[8px]">
             <div> Used Skill: React(Formik, Yup), Firebase</div>
@@ -137,18 +129,7 @@ function Built() {
             key="4"
             type="button"
             id="go"
-            value="4. 로그인(click)"
-            className="mt-1 border-0 w-[140px] text-left text-yellow-400 font-semibold"
-            onClick={() => handleWindow("login")}
-          />
-          <div className="ml-[8px]">
-            <div> Used Skill: React(Formik, Yup), Firebase</div>
-          </div>
-          <input
-            key="5"
-            type="button"
-            id="go"
-            value="5. 본 포트폴리오 페이지"
+            value="4. 본 포트폴리오 페이지"
             className="mt-1 border-0 w-[140px] text-left text-yellow-400 font-semibold"
             onClick={() => handleWindow("portfolio")}
           />
@@ -156,15 +137,31 @@ function Built() {
             <div> Used Skill: React, Firebase, Tailwind, Responsive Web</div>
           </div>
           <input
-            key="6"
+            key="5"
             type="button"
             id="go"
-            value="6. 소셜 SNS"
+            value="5. 소셜 SNS"
             className="mt-1 border-0 w-[100px] text-left text-yellow-400 font-semibold"
             onClick={() => handleWindow("")}
           />
           <div className="ml-[8px]">
             <div> Used Skill: React Native(Formik, Yup), Firebase</div>
+          </div>
+          <div>
+            <input
+              key="6"
+              type="button"
+              id="go"
+              value="6. Github(move to github)"
+              className="mt-1 border-0 w-[180px] text-left text-yellow-400 font-semibold"
+              onClick={
+                () => window.open("https://github.com/Jay881111", "_blank")
+                // () => handleWindow("todolist")
+              }
+            />
+            <div className="ml-[8px]">
+              <div> https://github.com/Jay881111 </div>
+            </div>
           </div>
         </div>
       </div>

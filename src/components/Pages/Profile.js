@@ -1,18 +1,13 @@
 import React, { useState } from "react";
 import "./Profile.css";
-import { useNavigate } from "react-router-dom";
-import TodoMain from "../todoList/TodoMain";
-import Board from "../board/BoardMain";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import { useMemo } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import "../Navbar.css";
-import SignUp from "../SignUp/SignUp";
-import SignIn from "../SignIn/SignIn";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-
 import Built from "./Built";
 import Studied from "./Studied";
 import ContactMe from "./ContactMe";
@@ -20,19 +15,15 @@ import AboutMe from "./AboutMe";
 import Title from "./Title";
 
 function Profile(props) {
-  console.log(props);
   const [nav, setNav] = useState(false);
   const navigate = useNavigate();
-  const [myWindow, setMyWindow] = useState();
 
   const handleNav = () => {
     setNav(!nav);
   };
 
-  // 이하 삭제
   const [email, setEmail] = useState();
   const auth = getAuth();
-  // const navigate = useNavigate();
 
   const memoMail = useMemo(() => {
     onAuthStateChanged(auth, (user) => {
@@ -60,7 +51,9 @@ function Profile(props) {
     <div className="bg-[#061B37] w-full h-[100%]">
       <Navbar className="bg-[#061B37]" variant="dark" fixed="top">
         <Container>
-          <Navbar.Brand href="/">J</Navbar.Brand>
+          <Navbar.Brand href="/">
+            <span className="text-[25px] font-bold text-white">J</span>
+          </Navbar.Brand>
           <Nav className="">
             <div className="hidden md:flex items-center text-[9px]">
               <Nav.Link href="#aboutme">
@@ -92,8 +85,18 @@ function Profile(props) {
                   <div className="ml-[15px] text-white">{email}</div>
                 ) : (
                   <div className="flex">
-                    <Nav.Link href="/SignUp">Sign Up</Nav.Link>
-                    <Nav.Link href="/Login">Log In</Nav.Link>
+                    <Link
+                      className="text-[#C1C6CC] no-underline hover:text-[#ffffac]"
+                      to="/SignUp"
+                    >
+                      Sign Up
+                    </Link>
+                    <Link
+                      className="text-[#C1C6CC] ml-2 no-underline hover:text-[#ffffac]"
+                      to="/Login"
+                    >
+                      Log In
+                    </Link>
                   </div>
                 )}
                 {email ? (
@@ -120,7 +123,7 @@ function Profile(props) {
           <div
             className={
               nav
-                ? "text-white uppercase fixed w-[120px] bg-[#061B37] mt-[50px] h-[23%] right-3 top-0 border-l border-b border-b-gray-700 border-l-gray-700 border-t border-t-gray-700 p-3 ease-in-out duration-500"
+                ? "text-white uppercase fixed w-[120px] bg-[#061B37] mt-[50px] h-[179px] right-3 top-0 border-l border-b border-b-gray-700 border-l-gray-700 border-t border-t-gray-700 p-3 ease-in-out duration-500"
                 : "fixed left-[-100%]"
             }
           >

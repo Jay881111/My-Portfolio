@@ -8,6 +8,7 @@ function PortFolioDetail() {
       </div>
       <div className="text-[13px] p-4">
         <div>1. 로그인되면 상단 navbar에 로그인 ID표기</div>
+        <div>- Test ID: ww@ww.ww // PW:wwwwwwww</div>
         <div>- firebase와 연동하여 회원가입기능 작동</div>
         <img
           src="./assets/screenshot.png"
