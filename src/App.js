@@ -21,15 +21,13 @@ import Timer from "./components/study/UseRef/Timer";
 import BoardMain from "./components/board/BoardMain";
 import BoardContent from "./components/board/BoardContent";
 import SignIn from "./components/SignIn/SignIn";
-import ProfileDetail from "./components/Pages/ProfileDetail";
-import NavBar from "../src/components/NavBar";
+
 import Profile from "./components/Pages/Profile";
 import LayOut from "./components/LayOut";
 
 function App() {
   return (
     <>
-      {/* <NavBar /> */}
       <LayOut>
         <Routes>
           <Route path="/" element={<Profile />} />
@@ -41,7 +39,6 @@ function App() {
           <Route path="/features/useref/search" element={<Search />} />
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/Login" element={<SignIn />} />
-          <Route path="/profile" element={<ProfileDetail />} />
           <Route path="/features/todolist" element={<TodoMain />} />
           <Route path="/features/boardmain/createboard" element={<Board />} />
           <Route path="/features/boardmain" element={<BoardMain />} />
