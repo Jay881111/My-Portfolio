@@ -7,6 +7,7 @@ import SignUp from "../SignUp/SignUp";
 import SignIn from "../SignIn/SignIn";
 import PortFolioDetail from "./PortFolioDetail";
 import { Link } from "react-router-dom";
+import NaverMail from "./NaverMail";
 
 function Built() {
   const [myWindow, setMyWindow] = useState();
@@ -71,6 +72,14 @@ function Built() {
             <PortFolioDetail />
           </div>
         );
+        break;
+      case "navermail":
+        setMyWindow(
+          <div className="w-[420px] p-[2px] border-[2px] no-underline text-white border-white">
+            <NaverMail />
+          </div>
+        );
+        break;
       default:
         // setMyWindow(<div className="w-0" />);
         break;
@@ -140,7 +149,18 @@ function Built() {
             key="5"
             type="button"
             id="go"
-            value="5. 소셜 SNS"
+            value="5. Naver Mail Clone Coding"
+            className="mt-1 border-0 w-[190px] text-left text-yellow-400 font-semibold"
+            onClick={() => handleWindow("navermail")}
+          />
+          <div className="ml-[8px]">
+            <div> Used Skill: React, Tailwind</div>
+          </div>
+          <input
+            key="6"
+            type="button"
+            id="go"
+            value="6. 소셜 SNS"
             className="mt-1 border-0 w-[100px] text-left text-yellow-400 font-semibold"
             onClick={() => handleWindow("")}
           />
@@ -149,10 +169,10 @@ function Built() {
           </div>
           <div>
             <input
-              key="6"
+              key="7"
               type="button"
               id="go"
-              value="6. Github(move to github)"
+              value="7. Github(move to github)"
               className="mt-1 border-0 w-[180px] text-left text-yellow-400 font-semibold"
               onClick={
                 () => window.open("https://github.com/Jay881111", "_blank")
