@@ -117,7 +117,7 @@ function Built() {
                     <div className="ml-[8px]">
                         <div> Used Skill: React, Firebase, Tailwind, Responsive Web</div>
                     </div>
-                    <input key="5" type="button" id="go" value="5. Naver Mail Clone Coding" className="mt-1 border-0 w-[190px] text-left text-yellow-400 font-semibold" onClick={() => handleWindow('navermail')} />
+                    <input key="5" type="button" id="go" value="5. Naver Mail Clone Coding(작업중)" className="mt-1 border-0 w-[190px] text-left text-yellow-400 font-semibold" onClick={() => handleWindow('navermail')} />
                     <div className="ml-[8px]">
                         <div> Used Skill: React, Tailwind</div>
                     </div>
